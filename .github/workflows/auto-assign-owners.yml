@@ -1,0 +1,10 @@
+name: 'Auto Assign'
+on:
+  pull_request_target:
+    types: [opened, ready_for_review]
+
+jobs:
+  add-owner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anuraaga/subowners@v0.0.1
